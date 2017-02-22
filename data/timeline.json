@@ -1,21 +1,21 @@
 [{
   "timelineId": "experience-education",
   "timelineData": [{
-    "mark" : "address-card",
+    "mark" : "child",
     "title" : "高中",
-    "text" : "考入县城国家级重点中学 <b>四川安岳中学</b> ，进入导读班并完成3年学业，获得高中文凭。",
+    "text" : "考入国家级重点中学 <a class=\"link\" href=\"http://www.ayzx.sc.cn\" target=\"_blank\"><b>四川安岳中学</b></a> ，进入导读班并完成3年学业，获得高中文凭。",
     "link" : "#",
     "time" : "2008-09"
   },{
-    "mark" : "address-card",
+    "mark" : "institution",
     "title" : "大学",
-    "text" : "以班级第一成绩考入985、211重点大学 <b>北京理工大学</b> 过程装备与控制工程专业，完成4年本科学业，获得大学本科文凭。",
+    "text" : "以班级第一成绩考入985、211重点大学 <a class=\"link\" href=\"http://www.bit.edu.cn/\" target=\"_blank\"><b>北京理工大学</b></a> 过程装备与控制工程专业，完成4年本科学业，获得大学本科文凭。",
     "link" : "#",
     "time" : "2011-09"
   },{
-    "mark" : "address-card",
+    "mark" : "graduation-cap",
     "title" : "硕士",
-    "text" : "考入985、211重点大学 <b>北京理工大学</b> 控制科学与工程专业，完成2.5年硕士研究生学业，获得大学硕士文凭。",
+    "text" : "以专业第二成绩考入985、211重点大学 <a class=\"link\" href=\"http://grd.bit.edu.cn/\" target=\"_blank\"><b>北京理工大学</b></a>  控制科学与工程专业，完成2.5年硕士研究生学业，获得研究生硕士文凭。",
     "link" : "#",
     "time" : "2015-09"
   }]
@@ -29,7 +29,7 @@
     "time" : "2014-08"
   },{
     "mark" : "automobile",
-    "title" : "参与第一个.net项目",
+    "title" : "参与第一个项目",
     "text" : "参与研发 <b>车辆管理系统</b> ，使用.net技术开发，为企业用户提供企业车辆管理与调派。系统基于公司现有物联网管理平台，通过车载OBD模块和2G物联网模块采集并上传数据到云端，可实现车辆实时监控、历史轨迹查询，车辆预约，以及报表生成等功能。",
     "link" : "#",
     "time" : "2015-01"

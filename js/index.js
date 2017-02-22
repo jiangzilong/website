@@ -12,6 +12,14 @@ $(function () {
 
 //页面元素初始化
 function elemInitialize() {
+    //resume数据
+    $.getJSON("data/resume.json",function(data){
+        $.each(data,function (name,val) {
+            addResume(val);
+        });
+    });
+
+    //timeline数据
     $.getJSON("data/timeline.json",function(data){
         $.each(data,function (name,val) {
             addTimline(val);
@@ -55,33 +63,51 @@ function functionBind() {
         }
     );
 }
-
 //生成随机数
 function  random(min, max){
     return Math.floor(Math.random()*(max-min)+min);
 }
 
+
+
+//简历添加函数
+function addResume(json) {
+    var id = json.resumeId;
+    var data = json.resumeData;
+    $(data).each(function (i, val) {
+        addResumeItem(id, val);
+    });
+}
 //时间轴添加函数
 function addTimline(json) {
     var id = json.timelineId;
     var data = json.timelineData;
     $(data).each(function (i, val) {
-        addTimlineBlock(id, val);
+        addTimlineItem(id, val);
     });
 }
+//resume模板
+function addResumeItem(id, itemData){
+    var templet = '<li>\
+                     <i class="fa fa-'+ itemData.icon +'""></i>\
+                     <label>'+ itemData.title +'</label>\
+                     <span>'+ itemData.value +'</span>\
+                   </li>';
+    $("#" + id + " .resume-content-des").append(templet);
+}
 //block模板
-function addTimlineBlock(id, blockData){
+function addTimlineItem(id, itemData){
     var templet = '<div class="timeline-block">\
-                     <div class="timeline-block-mark"><i class="fa fa-'+ blockData.mark +'"></i></div>\
+                     <div class="timeline-block-mark"><i class="fa fa-'+ itemData.mark +'"></i></div>\
                      <div class="timeline-block-content">\
                          <div class="timeline-block-content-title">\
-                         '+ blockData.title +'\
+                         '+ itemData.title +'\
                          </div>\
                          <div class="timeline-block-content-text">\
-                             '+ blockData.text +'\
+                             '+ itemData.text +'\
                          </div>\
-                         <a class="timeline-block-content-more" href="'+ blockData.link +'" target="_blank">查看详情</a>\
-                         <span class="timeline-block-content-time">'+ blockData.time +'</span>\
+                         <a class="timeline-block-content-more" href="'+ itemData.link +'" target="_blank">查看详情</a>\
+                         <span class="timeline-block-content-time">'+ itemData.time +'</span>\
                      </div>\
                    </div>';
     $("#" + id).append(templet);
