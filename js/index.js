@@ -1,9 +1,10 @@
 /**
- * Created by Administrator on 2017/2/16.
+ * Created by jiangzilong on 2017/2/16.
  */
 
 var colors = ["#ED5565", "#FC6E51", "#FFCE54", "#2ECC71", "#4FC1E9", "#8067B7", "#A0D468", "#48CFAD", "#5D9CEC", "#AC92EC", "#EC87C0"];
 var previous = 0;
+var eye_size = 100;
 
 $(function () {
     elemInitialize();
@@ -18,6 +19,20 @@ function elemInitialize() {
             addResume(val);
         });
     });
+    //skill数据
+    $.getJSON("data/skill.json",function(data){
+        $.each(data,function (name,val) {
+            addSkill(val);
+        });
+        //skill percent初始化
+        $('#resume-skill li').each(function() {
+            var percent = $(this).find('.resume-skill-bar').attr('skill-percent') + '%';
+            $(this).find('.resume-skill-percent').text(percent);
+            $(this).find('.resume-skill-bar').animate({
+                width: percent
+            }, 2000);
+        });
+    });
 
     //timeline数据
     $.getJSON("data/timeline.json",function(data){
@@ -28,15 +43,41 @@ function elemInitialize() {
 }
 //功能绑定
 function functionBind() {
+    //锚点定位平滑过渡
+    $(".scroll").click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top-100},1000);
+    });
+    
+    headerEyeFunc();
+    
+
+    $('.header-nav-mobile-btn').click(function () {
+        $('.header-nav-list').toggle(
+            function () {
+                $('.header-nav-list').css({display: 'block'});
+                $('.header-nav-list').animate({height: '230px'});
+                $('.header-nav-list').css({height: '230px'});
+            },
+            function () {
+                $('.header-nav-list').animate({display: 'none', height:'0px'});
+                $('.header-nav-list').css({display: 'none', height: '0'});
+            }
+        );
+    });
+}
+
+//眼球事件处理
+function headerEyeFunc() {
     //鼠标移动事件触发眼球转动
     $(document).mousemove(function (e) {
-        var x = e.pageX - 50,
-            y = e.pageY - 50,
+        var x = e.pageX - eye_size/2,
+            y = e.pageY - eye_size/2,
             winW = $(window).width(),
             winH = $(window).height(),
             a = Math.PI - Math.atan2(x,y),
             d = Math.sqrt(Math.pow(x,2) + Math.pow(y,2)),
-            mD = Math.sqrt(Math.pow(winW - 50,2) + Math.pow(winH - 50,2)),
+            mD = Math.sqrt(Math.pow(winW - eye_size/2,2) + Math.pow(winH - eye_size/2,2)),
             pupilTransX = 18 * x/winW,
             pupilTransY = 18 * y/winH,
             pupilSize = 12 - d * 3/mD;
@@ -63,6 +104,7 @@ function functionBind() {
         }
     );
 }
+
 //生成随机数
 function  random(min, max){
     return Math.floor(Math.random()*(max-min)+min);
@@ -76,6 +118,14 @@ function addResume(json) {
     var data = json.resumeData;
     $(data).each(function (i, val) {
         addResumeItem(id, val);
+    });
+}
+//技能添加函数
+function addSkill(json) {
+    var id = json.skillId;
+    var data = json.skillData;
+    $(data).each(function (i, val) {
+        addSkillItem(id, val);
     });
 }
 //时间轴添加函数
@@ -93,11 +143,20 @@ function addResumeItem(id, itemData){
                      <label>'+ itemData.title +'</label>\
                      <span>'+ itemData.value +'</span>\
                    </li>';
-    $("#" + id + " .resume-content-des").append(templet);
+    $("#" + id + " .resume-brief").append(templet);
+}
+//skill模板
+function addSkillItem(id, itemData){
+    var templet = '<li>\
+                     <label class="resume-skill-tag">'+ itemData.tag +'</label>\
+                     <span class="resume-skill-bar" skill-percent="'+ itemData.percent +'"></span>\
+                     <span class="resume-skill-percent"></span>\
+                   </li>';
+    $("#" + id).append(templet);
 }
 //block模板
 function addTimlineItem(id, itemData){
-    var templet = '<div class="timeline-block">\
+    var templet = '<div class="timeline-block clear">\
                      <div class="timeline-block-mark"><i class="fa fa-'+ itemData.mark +'"></i></div>\
                      <div class="timeline-block-content">\
                          <div class="timeline-block-content-title">\

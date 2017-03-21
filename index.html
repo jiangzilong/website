@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" id="main">
         <div class="header">
             <div class="header-eye">
                 <div class="header-eye-ball">
@@ -21,12 +21,14 @@
                 </div>
             </div>
             <div class="header-nav">
-                <ul>
-                    <li>主页</li>
-                    <li>经历</li>
-                    <li>博客</li>
-                    <li>趣味</li>
-                    <li>留言</li>
+                <button class="header-nav-mobile-btn"><i class="fa fa-bars"></i></button>
+                <ul class="header-nav-list">
+                    <li><a class="scroll" href="#main"><i class="fa fa-home"></i>主页</a></li>
+                    <li><a class="scroll" href="#resume"><i class="fa fa-book"></i>简历</a></li>
+                    <li><a class="scroll" href="#experience"><i class="fa fa-paw"></i>经历</a></li>
+                    <li><a href="http://blog.jiangzilong.com" target="_blank"><i class="fa fa-bookmark-o"></i>博客</a></li>
+                    <li><a class="scroll" href="#intrist"><i class="fa fa-cubes"></i>趣味</a></li>
+                    <li><a class="scroll" href="#comment"><i class="fa fa-comment-o"></i>留言</a></li>
                 </ul>
             </div>
         </div>
@@ -38,23 +40,49 @@
             </div>
         </div>
 
-        <div class="content">
+        <div class="content" id="resume">
             <div class="content-title">个人简历</div>
-            <div class="resume" id="resume">
-                <div class="resume-title">简 介</div>
-                <div class="resume-content">
-                    <ul class="resume-content-des">
-                        <!--<li>
-                            <i class="fa fa-user"></i>
-                            <label>姓名</label>
-                            <span>蒋 子珑</span>
-                        </li>-->
-                    </ul>
-                    <img class="resume-content-img" src="">
+            <div class="resume">
+                <div class="resume-block" id="resume-brief">
+                    <div class="resume-block-title size-40">简 介</div>
+                    <div class="resume-block-content">
+                        <ul class="resume-brief">
+                        </ul>
+                        <img class="resume-block-content-img" src="">
+                        <button class="resume-block-content-mobile-btn"><i class="fa fa-eye"></i></button>
+                    </div>
                 </div>
 
+
+                <div class="resume-block" id="resume-skill">
+                    <div class="resume-block-title size-100">技 能</div>
+                    <div class="resume-block-content flex">
+                        <div class="resume-skill">
+                            <h5 class="resume-skill-title"><i class="fa fa-code"></i> 编程能力</h5>
+                            <ul id="skill-code">
+                            </ul>
+                        </div>
+                        <div class="resume-skill">
+                            <h5 class="resume-skill-title"><i class="fa fa-cubes"></i> 框架经验</h5>
+                            <ul id="skill-framework">
+                            </ul>
+                        </div>
+                        <div class="resume-skill">
+                            <h5 class="resume-skill-title"><i class="fa fa-windows"></i> 工具操作</h5>
+                            <ul id="skill-tool">
+                            </ul>
+                        </div>
+                        <div class="resume-skill">
+                            <h5 class="resume-skill-title"><i class="fa fa-paw"></i> 个人兴趣</h5>
+                            <ul id="skill-hobby">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-            <div class="content-title">教育经历</div>
+            <div class="content-title" id="experience">教育经历</div>
             <div class="timeline" id="experience-education">
             </div>
             <div class="content-title">工作经历</div>
@@ -75,6 +103,12 @@
             </div>
         </div>
 
+        <!-- 多说评论框 start -->
+        <div id="comment">
+            <div class="ds-thread" data-thread-key="" data-title="主页" data-url="www.jiangzilong.com"></div>
+        </div>
+        <!-- 多说评论框 end -->
+
         <div class="footer">
             <div class="footer-contact">
                 <a href="https://github.com/jiangzilong" target="_blank"><i class="fa fa-github"></i></a>
@@ -91,6 +125,20 @@
         </div>
 
     </div>
+
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"jiangzilong"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
 
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/index.js"></script>

@@ -1,0 +1,67 @@
+[{
+  "skillId": "skill-code",
+  "skillData": [{
+    "tag" : "HTML",
+    "percent" : "90"
+  },{
+    "tag" : "CSS",
+    "percent" : "90"
+  },{
+    "tag" : "JavaScript",
+    "percent" : "80"
+  },{
+    "tag" : "C#",
+    "percent" : "75"
+  },{
+    "tag" : "Java",
+    "percent" : "55"
+  }]
+},{
+  "skillId": "skill-framework",
+  "skillData": [{
+    "tag" : "bootstrap",
+    "percent" : "80"
+  },{
+    "tag" : "ace",
+    "percent" : "80"
+  },{
+    "tag" : "jquery",
+    "percent" : "85"
+  },{
+    "tag" : "vue",
+    "percent" : "60"
+  },{
+    "tag" : "efs",
+    "percent" : "75"
+  }]
+},{
+  "skillId": "skill-tool",
+  "skillData": [{
+    "tag" : "VisualStudio",
+    "percent" : "85"
+  },{
+    "tag" : "WebStorm",
+    "percent" : "90"
+  },{
+    "tag" : "IDEA",
+    "percent" : "80"
+  },{
+    "tag" : "PhotoShop",
+    "percent" : "70"
+  },{
+    "tag" : "Office",
+    "percent" : "80"
+  }]
+},{
+  "skillId": "skill-hobby",
+  "skillData": [{
+    "tag" : "吉他",
+    "percent" : "80"
+  },{
+    "tag" : "跑步",
+    "percent" : "80"
+  },{
+    "tag" : "小说",
+    "percent" : "70"
+  }]
+}]

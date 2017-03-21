@@ -1,0 +1,28 @@
+[{
+  "resumeId": "resume-brief",
+  "resumeData": [{
+    "icon" : "user",
+    "title" : "姓 名",
+    "value" : "蒋 子 珑"
+  },{
+    "icon" : "calendar",
+    "title" : "出生日期",
+    "value" : "1993-2-2"
+  },{
+    "icon" : "institution",
+    "title" : "学 校",
+    "value" : "北京理工大学"
+  },{
+    "icon" : "graduation-cap",
+    "title" : "学 历",
+    "value" : "硕士研究生"
+  },{
+    "icon" : "envelope",
+    "title" : "邮 箱",
+    "value" : "jiangzilong5@163.com"
+  },{
+    "icon" : "phone",
+    "title" : "电 话",
+    "value" : "15501160075"
+  }]
+}]
