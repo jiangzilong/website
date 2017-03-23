@@ -5,7 +5,7 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <meta name="description" content="蒋子珑的个人简历"/>
     <Meta name="author" content="蒋子珑, jiangzilong5@163.com">
-    <title>蒋子珑的简历</title>
+    <title>test</title>
 
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/resume.css" rel="stylesheet">
@@ -14,8 +14,8 @@
     <div class="container">
         <div class="overview">
             <div class="overview-pic">
-                <img src="image/wx.jpg"/>
-                <h1>蒋 子珑</h1>
+                <div class="portrait"><img src="image/wx.jpg"/></div>
+                <h1 class="ribbon"><span class="ribbon-content">蒋子珑</span></h1>
                 <h6>Web前端开发方向</h6>
             </div>
             <div class="overview-skill">
@@ -25,19 +25,19 @@
                 </div>
                 <div class="overview-skill-block">
                     <label>CSS</label>
-                    <span percent="85"></span>
-                </div>
-                <div class="overview-skill-block">
-                    <label>JavaScript</label>
                     <span percent="80"></span>
                 </div>
                 <div class="overview-skill-block">
+                    <label>JavaScript</label>
+                    <span percent="75"></span>
+                </div>
+                <div class="overview-skill-block">
                     <label>jQuery</label>
-                    <span percent="85"></span>
+                    <span percent="80"></span>
                 </div>
                 <div class="overview-skill-block">
                     <label>Vue</label>
-                    <span percent="55"></span>
+                    <span percent="45"></span>
                 </div>
                 <div class="overview-skill-block">
                     <label>BootStrap</label>
@@ -45,23 +45,24 @@
                 </div>
                 <div class="overview-skill-block">
                     <label>PhotoShop</label>
-                    <span percent="60"></span>
+                    <span percent="50"></span>
                 </div>
             </div>
             <div class="overview-skilldes">
-                <p>良好的HTML、CSS、JavaScript语言基础，熟悉HTML5、CSS3、ES5/ES6标准，熟悉原生JS开发模式，熟悉响应式开发设计。</p>
-                <p>熟悉jQuery、BootStrap、Ace等框架，了解Vue等组件化开发框架。</p>
-                <p>熟悉C#等后台开发语言，具有后台数据接口开发经验。了解Java，能很好地配合后台完成系统搭建。</p>
-                <p>希望能亲眼看到爪哇犀牛。</p>
+                <p class="arrow">良好的HTML、CSS、JavaScript语言基础，熟悉HTML5、CSS3、ES5标准，了解ES6，熟悉响应式开发设计。</p>
+                <p class="arrow">熟悉jQuery、BootStrap、Ace等框架，了解Vue等组件化开发框架。</p>
+                <p class="arrow">了解C#、Java等后台开发语言，具有后台数据接口开发经验，能很好地配合后台完成系统搭建。</p>
+                <p class="arrow">希望能亲眼看到爪哇犀牛。</p>
             </div>
             <div class="overview-contactme">
-                <a href="#"><i class="fa fa-phone"></i><span>15501160075</span></a>
                 <a href="#"><i class="fa fa-qq"></i><span>739847262</span></a>
                 <a href="#"><i class="fa fa-weixin"></i><span>jiang-zilong</span></a>
+                <a href="#"><i class="fa fa-phone"></i><span>15501160075</span></a>
+                <a href="#"><i class="fa fa-envelope-o"></i><span>jiangzilong5@163.com</span></a>
                 <a href="http://www.jiangzilong.com" target="_blank"><i class="fa fa-desktop"></i><span>www.jiangzilong.com</span></a>
                 <a href="https://github.com/jiangzilong" target="_blank"><i class="fa fa-github"></i><span>https://github.com/jiangzilong</span></a>
-                <a href="http://codepen.io/jiangzilong" target="_blank"><i class="fa fa-codepen"></i><span>http://codepen.io/jiangzilong</span></a>
-                <a href="http://weibo.com/u/2373258955" target="_blank"><i class="fa fa-weibo"></i><span>http://weibo.com/u/2373258955</span></a>
+                <!--<a href="http://codepen.io/jiangzilong" target="_blank"><i class="fa fa-codepen"></i><span>http://codepen.io/jiangzilong</span></a>-->
+                <!--<a href="http://weibo.com/u/2373258955" target="_blank"><i class="fa fa-weibo"></i><span>http://weibo.com/u/2373258955</span></a>-->
             </div>
         </div>
 
@@ -70,57 +71,66 @@
                 <h1>项目经历</h1>
                 <div class="detail-block">
                     <h2>车联网管理系统</h2>
+                    <span class="tag-role"><a class="tag-arrow"></a>部分功能</span>
                     <p>PC端web应用，.net Framework 4.0，实现车辆实时监控、历史轨迹查询，车辆预约与调派及报表生成等功能。</p>
-                    <span class="detail-block-tag">PC</span>
-                    <span class="detail-block-tag">.net</span>
-                    <span class="detail-block-tag">XML</span>
+                    <span class="tag-keyword">PC</span>
+                    <span class="tag-keyword">.net</span>
+                    <span class="tag-keyword">XML</span>
                 </div>
                 <div class="detail-block">
                     <h2>OBD车联网服务号</h2>
+                    <span class="tag-role"><a class="tag-arrow"></a>项目负责人</span>
                     <p>移动端应用，微信公众平台提供入口，绑定微信openID。扫码添加车辆，支持多模块管理。实现实时监控、历史查询、行程图文统计、信息播报等。</p>
-                    <span class="detail-block-tag">移动端</span>
-                    <span class="detail-block-tag">微信服务号</span>
-                    <span class="detail-block-tag">Echarts</span>
+                    <span class="tag-keyword">移动端</span>
+                    <span class="tag-keyword">微信</span>
+                    <span class="tag-keyword">Echarts</span>
                 </div>
                 <div class="detail-block">
                     <h2>起重机在线监控平台</h2>
+                    <span class="tag-role"><a class="tag-arrow"></a>前端开发</span>
                     <p>PC端web应用，采集PLC、旋转编码器等数据并分类统计后转接至前台，加入HTML5动画效果，以双试图模式标示吊机大小车位置。</p>
-                    <span class="detail-block-tag">PC</span>
-                    <span class="detail-block-tag">animate</span>
+                    <span class="tag-keyword">PC</span>
+                    <span class="tag-keyword">animate</span>
                 </div>
-                <div class="detail-block">
+                <div class="detail-block multi-p">
                     <h2>工程测绘系统</h2>
-                    <p>多级用户权限设计，通过事务、事件划分功能模块，再归类角色定位用户权限；</p>
-                    <p>项目模块化设计，不同项目组间分属不同数据单元，实现工程数据与业务数据独立；</p>
+                    <span class="tag-role"><a class="tag-arrow"></a>项目负责人</span>
+                    <p>已应用于京张高铁第八标段测绘工程，进入实测阶段</p>
+                    <p>多级用户权限，通过事务、事件划分功能模块，归类角色定位用户权限；</p>
+                    <p>项目模块化，不同项目组分属不同数据单元，工程数据与业务数据独立；</p>
                     <p>响应式设计，以768px为尺寸阈值设计PC与移动端UI差异；</p>
-                    <p>异步表单加载，ajax异步分页加载后台数据并回填至页面；</p>
-                    <p>Session封装用户信息，将用户信息打包存入session，随后可按需提取，会话失效时提示重新登录；</p>
                     <p>后台程序模块化，将坐标转换、数据查询等后台程序拆分为子项，按需重组调用获取目标数据；</p>
-                    <p>创建映射页接口，提取前台ajax请求中的method参数，据此实例化对应class，实现后台程序统一管理。</p>
-                    <span class="detail-block-tag">Ajax</span>
-                    <span class="detail-block-tag">jQuery</span>
-                    <span class="detail-block-tag">响应式</span>
+                    <p>创建映射页接口，提取ajax请求method参数，实例化对应方法，实现后台程序统一管理。</p>
+                    <span class="tag-keyword">响应式</span>
+                    <span class="tag-keyword">Bootstrap</span>
+                    <span class="tag-keyword">jQuery</span>
+                    <span class="tag-keyword">Ajax</span>
+                    <span class="tag-keyword">json</span>
                 </div>
             </section>
-            <section class="detail-intership">
+            <section class="detail-internship">
                 <h1>实习经历</h1>
                 <div class="detail-block">
                     <h2>北京世纪联信科技有限公司</h2>
-                    <p>实习期2年，主要工作为</p>
+                    <span class="tag-role"><a class="tag-arrow"></a>长期</span>
+                    <p>实习期2年，主要负责业务平台的开发与测试，包括web前端页面、后台数据接口、数据库结构设计等。</p>
                 </div>
                 <div class="detail-block">
                     <h2>北京博泰慧视高清技术有限公司</h2>
-                    <p>合作实习，为期1个月，主要为该公司提供平台支持服务，基于原有框架开发视频矩阵管理平台。</p>
+                    <span class="tag-role"><a class="tag-arrow"></a>短期</span>
+                    <p>合作实习，为期1个月，负责提供平台支持服务，开发视频矩阵管理平台。</p>
                 </div>
             </section>
             <section class="detail-eduction">
                 <h1>教育经历</h1>
                 <div class="detail-block">
-                    <h2>北京理工大学 — 本科</h2>
+                    <h2>北京理工大学</h2>
+                    <span class="tag-role"><a class="tag-arrow"></a>本科</span>
                     <p>2011/9-2015/7  北京理工大学  过程装备与控制工程  全日制本科</p>
                 </div>
                 <div class="detail-block">
-                    <h2>北京理工大学 — 硕士</h2>
+                    <h2>北京理工大学</h2>
+                    <span class="tag-role"><a class="tag-arrow"></a>硕士</span>
                     <p>2015/9-2018/3  北京理工大学  控制科学与工程  硕士研究生</p>
                 </div>
             </section>
